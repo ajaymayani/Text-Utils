@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import React,{useState} from 'react';
+import React from 'react';
 
 export default function Navbar1(props) {
 
