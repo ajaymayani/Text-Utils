@@ -15,9 +15,7 @@ export default function TextForm(props) {
     }
 
     const handleCopyClick = () => {
-        let textarea = document.getElementById('textarea');
-        textarea.select();
-        navigator.clipboard.writeText(textarea.value);
+        navigator.clipboard.writeText(text);
     }
 
     const handleExtraSpacesClick = () => {
@@ -55,7 +53,7 @@ export default function TextForm(props) {
             </Container>
             <Container className='mt-3' style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
                 <h3>Your text summary</h3>
-                <p>{text.split(" ").length} words {text.length} characters</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
                 <h3 className='mt-3'>Preview</h3>
                 <p>{text.length>0?text:'Enter something in the textbox above to preview it here'}</p>
             </Container>

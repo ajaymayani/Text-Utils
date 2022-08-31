@@ -7,11 +7,11 @@ export default function Navbar1(props) {
         <div>
             <Navbar bg={props.mode} expand="lg" variant={props.mode}>
                 <Container>
-                    <Navbar.Brand href="#home">TextUtils</Navbar.Brand>
+                    <Navbar.Brand href="#">TextUtils</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto text-light">
-                            <Nav.Link href="/" className='active'>Home</Nav.Link>
+                            <Nav.Link href="#" className='active'>Home</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                     <div className="form-check form-switch">
